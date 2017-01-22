@@ -23,14 +23,13 @@
         </li>
       </ul>
       <!-- 3.3 Логотип — это ссылка на главную страницу.-->
-      <a href="#" сlass="main-header-logo"><img src="#" width="10px" height="10"></a>
     </nav>
-    <a href="#"
-
+    <a href="#" сlass="main-header-logo"><img src="#" width="10px" height="10"></a>
+  </header>
     <main>
   <div class="filters">
     <form action="#" method="post">
-      <fieldset class="filters-group filters-checkbox filters-checkbox-left">
+      <fieldset class="filters-group filters-checkbox-left">
         <legend>Инфраструктура:</legend>
         <input type="checkbox" name="pool" id="pool" checked>
         <label for="pool">Бассейн</label>
@@ -39,7 +38,7 @@
         <input type="checkbox" name="wifi" id="wifi">
         <label for="wifi">Wi-Fi</label>
       </fieldset>
-      <fieldset class="filters-group filters-checkbox filters-checkbox-right">
+      <fieldset class="filters-group filters-checkbox-right">
         <legend>Тип жилья:</legend>
         <input type="checkbox" name="hotel" id="hotel" checked>
         <label for="hotel">Гостиница</label>
@@ -47,15 +46,20 @@
         <label for="motel">Мотель</label>
         <input type="checkbox" name="apartment" id="apartment" checked>
         <label for="apartment">Апартаменты</label>
-
-        <label for="price-per-day">Стоимость в сутки (р):</label>
+      </fieldset>
+      <fieldset class="price-per-day">
+<legend>Стоимость в сутки (р):</legend>
+        <label for="price-per-day">Стоимость в сутки (р):</label for="price-per-day">
         <div class="price-range">
           <span>От 0</span>
           <span>До 3000</span>
           <!--Вот тут надо чтоб в спан шло значение из рэнж-->
+
         </div>
+      </fieldset>
         <input type="range" name="price-per-day" id="price-per-day" min="0" max="4000" step="100">
         <button type="submit">ПОКАЗАТЬ</button>
+
     </form>
   </div>
 
@@ -67,44 +71,56 @@
     Сортировка
   </span>
     <ul class="sort-list">
-      <li class="sort-item sort-item-active">По цене</li>
-      <li class="sort-item">По типу</li>
-      <li class="sort-item">По рейтингу</li>
+      <li class="sort-item sort-item-active">
+        <a href="#">По цене</a>
+      </li>
+      <li class="sort-item">
+        <a href="#">По типу</a>
+      </li>
+      <li class="sort-item">
+        <a href="#>">По рейтингу</a>
+      </li>
     </ul>
-    <button type="submit" name="up" id="up"></button>
-    <button type="submit" name="down" id="down"></button>
+    <ul>
+      <li class="sort-btn">
+    <a href="#">up</a>
+      </li>
+      <li class="sort--btn">
+    <a href="#">down</a>
+      </li>
+    </ul>
   </div>
 
   <div class="catalog">
     <div class="catalog-item">
+      <img src="#" width="60px" height="40px" alt="Amara">
       <h2>Amara Resort & Spa</h2>
       <span>Гостиница</span>
       <span>От 3500 р.</span>
-      <img src="#" width="60px" height="40px" alt="Amara">
       <button type="submit">Подробнее</button>
       <button type="submit">Забронировать</button>
       <span class="raiting">Рейтинг: 8,5</span>
-      <span class="stars stars-top"></span>
+      <span class="stars"></span>
     </div>
     <div class="catalog-item">
+      <img src="#" width="60px" height="40px" alt="Amara">
       <h2>Desert Quail Inn</h2>
       <span>Мотель</span>
       <span>От 2000 р.</span>
-      <img src="#" width="60px" height="40px" alt="Amara">
       <button type="submit">Подробнее</button>
       <button type="submit">Забронировать</button>
       <span class="raiting">Рейтинг: 8,9</span>
-      <span class="stars stars-middle"></span>
+      <span class="stars"></span>
     </div>
     <div class="catalog-item">
+      <img src="#" width="60px" height="40px" alt="Amara">
       <h2>Villas At Poco Diablo</h2>
       <span>Апартаменты</span>
       <span>От 4000 р.</span>
-      <img src="#" width="60px" height="40px" alt="Amara">
-      <button type="submit">Подробнее</button>
-      <button type="submit">Забронировать</button>
+      <a href="#" class="more">Подробнее</a>
+      <a href="#" class="book">Забронировать</a>
       <span class="raiting">Рейтинг: 9,2</span>
-      <span class="stars stars-bottom"></span>
+      <span class="stars"></span>
     </div>
   </div>
 </main>
