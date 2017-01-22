@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Гостиницы</title>
+</head>
+<body>
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a href="#">Информация</a>
+        </li>
+        <li class="navigation-item">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="navigation-item">
+          <a href="#">Карта Штата</a>
+        </li>
+        <li class="navigation-item">
+          <a href="#">Гостиницы</a>
+        </li>
+      </ul>
+      <!-- 3.3 Логотип — это ссылка на главную страницу.-->
+      <a href="#" сlass="main-header-logo"><img src="#" width="10px" height="10"></a>
+    </nav>
+    <a href="#"
+
+    <main>
+  <div class="filters">
+    <form action="#" method="post">
+      <fieldset class="filters-group filters-checkbox filters-checkbox-left">
+        <legend>Инфраструктура:</legend>
+        <input type="checkbox" name="pool" id="pool" checked>
+        <label for="pool">Бассейн</label>
+        <input type="checkbox" name="parking" id="parking">
+        <label for="parking">Парковка</label>
+        <input type="checkbox" name="wifi" id="wifi">
+        <label for="wifi">Wi-Fi</label>
+      </fieldset>
+      <fieldset class="filters-group filters-checkbox filters-checkbox-right">
+        <legend>Тип жилья:</legend>
+        <input type="checkbox" name="hotel" id="hotel" checked>
+        <label for="hotel">Гостиница</label>
+        <input type="checkbox" name="motel" id="motel" checked>
+        <label for="motel">Мотель</label>
+        <input type="checkbox" name="apartment" id="apartment" checked>
+        <label for="apartment">Апартаменты</label>
+
+        <label for="price-per-day">Стоимость в сутки (р):</label>
+        <div class="price-range">
+          <span>От 0</span>
+          <span>До 3000</span>
+          <!--Вот тут надо чтоб в спан шло значение из рэнж-->
+        </div>
+        <input type="range" name="price-per-day" id="price-per-day" min="0" max="4000" step="100">
+        <button type="submit">ПОКАЗАТЬ</button>
+    </form>
+  </div>
+
+  <div class="found">
+  <span class="found-number">
+    Найдено: 3
+  </span>
+    <span class="found-sort">
+    Сортировка
+  </span>
+    <ul class="sort-list">
+      <li class="sort-item sort-item-active">По цене</li>
+      <li class="sort-item">По типу</li>
+      <li class="sort-item">По рейтингу</li>
+    </ul>
+    <button type="submit" name="up" id="up"></button>
+    <button type="submit" name="down" id="down"></button>
+  </div>
+
+  <div class="catalog">
+    <div class="catalog-item">
+      <h2>Amara Resort & Spa</h2>
+      <span>Гостиница</span>
+      <span>От 3500 р.</span>
+      <img src="#" width="60px" height="40px" alt="Amara">
+      <button type="submit">Подробнее</button>
+      <button type="submit">Забронировать</button>
+      <span class="raiting">Рейтинг: 8,5</span>
+      <span class="stars stars-top"></span>
+    </div>
+    <div class="catalog-item">
+      <h2>Desert Quail Inn</h2>
+      <span>Мотель</span>
+      <span>От 2000 р.</span>
+      <img src="#" width="60px" height="40px" alt="Amara">
+      <button type="submit">Подробнее</button>
+      <button type="submit">Забронировать</button>
+      <span class="raiting">Рейтинг: 8,9</span>
+      <span class="stars stars-middle"></span>
+    </div>
+    <div class="catalog-item">
+      <h2>Villas At Poco Diablo</h2>
+      <span>Апартаменты</span>
+      <span>От 4000 р.</span>
+      <img src="#" width="60px" height="40px" alt="Amara">
+      <button type="submit">Подробнее</button>
+      <button type="submit">Забронировать</button>
+      <span class="raiting">Рейтинг: 9,2</span>
+      <span class="stars stars-bottom"></span>
+    </div>
+  </div>
+</main>
+
+<footer class="main-footer">
+    <div class="sedona">
+      <a href="#">#VISITSEDONA</a>
+    </div>
+    <section class="social">
+      <a class="social-btn social-btn-tw" href="#"></a>
+      <a class="social-btn social-btn-fb" href="#"></a>
+      <a class="social-btn social-btn-youtube" href="#"></a>
+    </section>
+    <section class="footer-copyright">
+      <p>Website by</p>
+      <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+    </section>
+</footer>
+</div>
+</body>
+</html>
