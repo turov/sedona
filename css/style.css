@@ -1,13 +1,32 @@
+@font-face {
+  font-family: "PT Sans"; /* Имя шрифта */
+  src: url("../fonts/ptsans.woff2"); /* Путь к файлу со шрифтом */
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans"; /* Имя шрифта */
+  src: url("../fonts/ptsansbold.woff2"); /* Путь к файлу со шрифтом */
+  font-weight: bold;
+}
+
 body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #000000;
+  text-transform: uppercase;
 }
+
+a {
+  text-decoration: none;
+}
+
 
 h1 {
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
 }
 
 h2 {
@@ -21,3 +40,205 @@ h3 {
   line-height: 26px;
   font-weight: bold;
 }
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 40px 2px #dbdbdb;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  position: relative;
+}
+
+
+.navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item {
+  float: left;
+  width: 240px;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+
+.navigation-item:last-child {
+  float: right;
+}
+
+.navigation-item:nth-child(3) {
+  float: right;
+}
+
+.navigation-item a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+/* mini logo */
+.mini-logo {
+  width: 138px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* intro */
+
+.intro {
+  box-sizing: border-box;
+  background: url("../img/main-background.jpg") 50% 22% no-repeat;
+  min-height: 510px;
+  padding-top: 76px;
+}
+
+.intro-logo {
+  width: 458px;
+  height: 352px;
+  margin: 0 auto;
+}
+
+
+/* promo */
+
+.promo {
+  text-align: center;
+}
+
+.promo h1 {
+padding-top: 65px;         /* ХЭЛП МИ */
+  padding-left: 350px;    /* ХЭЛП МИ */
+  padding-right: 350px;    /* ХЭЛП МИ */
+}
+
+.promo p {
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+  padding-bottom: 50px; /* ХЭЛП МИ */
+}
+
+/* reasons info */
+
+.reasons-info {
+  float: left;
+  width: 400px;
+  min-height: 256px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.reasons-info h2 {
+  font-color: #ffffff;
+  padding-top: 50px; /* ХЭЛП МИ */
+}
+
+.reasons-info p {
+
+}
+
+.reasons-image {
+  float: right;
+  width: 800px;
+  min-height:256px;
+}
+
+.reasons-bottom .reasons-info {
+  float: right;
+  width: 400px;
+  min-height: 256px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.reasons-bottom .reasons-image {
+  float: left;
+  width: 800px;
+  min-height:256px;
+}
+
+/* проблема: белая полоса перед фичерс */
+
+/* features */
+
+.features {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-item {
+  float: left;
+  width: 400px;
+  height: 330px;
+}
+
+.feature-item p {
+  color: #333333;
+}
+
+.features-bottom .feature-item {
+  background-color: #eeeeee;
+}
+
+/* form hotels */
+
+.form-hotels {
+  text-align: center;
+}
+
+.form-hotels a {
+  background: #766357;
+  /* эх, оформить надо как нибудь =) */
+  padding-bottom: 100px;
+}
+
+/* map */
+
+
+/* вот тут проблема, ибо футер полупрозрачный и из-него карта проглядывает */
+
+/* футер */
+
+/* проблема: белая полоса перед футером */
+
+.main-footer {
+  text-align: center;
+}
+
+.sedona {
+  float: left;
+  width: 400px;
+}
+
+.social {
+  float: left;
+  width: 400px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 400px;
+}
+
+
+
+
+
