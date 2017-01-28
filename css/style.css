@@ -287,11 +287,18 @@ main img {
 
 /* hotels */
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+}
+
 .filters {
   background: url("../img/catalog-background.jpg") 50% 22% no-repeat;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 60px;
+  padding-left: 72px;
   padding-right: 60px;
 }
 
@@ -336,32 +343,97 @@ main img {
 }
 .found .found-sort {
   float: left;
-  width: 875px;
+  width: 90px;
 }
 
-.found .sort-item {
+.sort-list {
+  font-size: 0;
+  float: left;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
+.sort-item {
   display: inline-block;
+  line-height: 18px;
+  font-size: 12px;
+  vertical-align: top;
 }
 
+.sort-list-direct {
+  font-size: 0;
+  float: right;
+  width: 100px;
+  padding: 0;
+  margin: 0;
+}
+.sort-btn {
+  display: inline-block;
+  line-height: 18px;
+  font-size: 12px;
+  vertical-align: top;
+}
 
 /*каталог меню, проблемы*/
 
 /*каталог */
 
 .catalog-item {
-  box-sizing: border-box;
-  height: 151px;
   padding: 30px 70px;
   border-top: #000000 solid 1px;
 }
 
-.catalog-item img {
+.item-img {
   float: left;
   width: 137px;
+  margin-right: 30px;
 }
 
-.catalog-item h3 {
+.item-info {
   float: left;
-  width: 300px;
+  width: 260px;
 }
 
+.item-rate {
+  float: right;
+  width: 150px;
+}
+
+.item-type {
+  font-size: 0;
+}
+
+.item-type span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 21px;
+  width: 110px;
+  margin-right: 6px; /* точно */
+}
+
+.item-type span:last-child {
+  margin-right: 0;
+}
+
+.item-info h3 {
+  margin: 0;
+}
+
+.item-btns {
+  font-size: 0;
+}
+
+.item-btns a {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 8px 16px;
+  background: #ffff00;
+  margin-right: 6px;
+}
+
+.item-btns a:last-child {
+  margin-right: 0;
+}

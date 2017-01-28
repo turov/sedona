@@ -36,21 +36,33 @@
       <form action="#" method="post" class="clearfix">
         <fieldset class="filters-group filters-left">
           <legend>Инфраструктура:</legend>
-          <input type="checkbox" name="pool" id="pool" checked>
-          <label for="pool">Бассейн</label>
-          <input type="checkbox" name="parking" id="parking">
-          <label for="parking">Парковка</label>
-          <input type="checkbox" name="wifi" id="wifi">
-          <label for="wifi">Wi-Fi</label>
+          <div class="filters-checkox">
+            <input type="checkbox" name="pool" id="pool" checked>
+            <label for="pool">Бассейн</label>
+          </div>
+          <div class="filters-checkox">
+            <input type="checkbox" name="parking" id="parking">
+            <label for="parking">Парковка</label>
+          </div>
+          <div class="filters-checkox">
+            <input type="checkbox" name="wifi" id="wifi">
+            <label for="wifi">Wi-Fi</label>
+          </div>
         </fieldset>
         <fieldset class="filters-group filters-center">
           <legend>Тип жилья:</legend>
-          <input type="checkbox" name="hotel" id="hotel" checked>
-          <label for="hotel">Гостиница</label>
-          <input type="checkbox" name="motel" id="motel" checked>
-          <label for="motel">Мотель</label>
-          <input type="checkbox" name="apartment" id="apartment" checked>
-          <label for="apartment">Апартаменты</label>
+          <div class="filters-checkox">
+            <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="hotel">Гостиница</label>
+          </div>
+          <div class="filters-checkox">
+            <input type="checkbox" name="motel" id="motel" checked>
+            <label for="motel">Мотель</label>
+          </div>
+          <div class="filters-checkox">
+            <input type="checkbox" name="apartment" id="apartment" checked>
+            <label for="apartment">Апартаменты</label>
+          </div>
         </fieldset>
         <fieldset class="filters-group filters-right">
           <legend>Стоимость в сутки (р):</legend>
@@ -74,7 +86,7 @@
       <span class="found-sort">
     Сортировка
   </span>
-      <ul class="sort-list clearfix">
+      <ul class="sort-list">
         <li class="sort-item sort-item-active">
           <a href="#">По цене</a>
         </li>
@@ -89,7 +101,7 @@
         <li class="sort-btn">
           <a href="#">up</a>
         </li>
-        <li class="sort--btn">
+        <li class="sort-btn">
           <a href="#">down</a>
         </li>
       </ul>
@@ -97,14 +109,24 @@
 
     <div class="catalog">
       <div class="catalog-item clearfix">
-        <img src="img/amaraspa.jpg" width="135" height="90" alt="Amara">
+        <div class="item-img">
+          <img src="img/amaraspa.jpg" width="135" height="90" alt="Amara">
+        </div>
+        <div class="item-info">
         <h3>Amara Resort & Spa</h3>
+          <div class="item-type">
         <span>Гостиница</span>
         <span>От 3500 р.</span>
-        <button type="submit">Подробнее</button>
-        <button type="submit">Забронировать</button>
+          </div>
+          <div class="item-btns">
+        <a href="#" class="item-btn-left">Подробнее</a>
+        <a href="#" class="item-btn-right">Забронировать</a>
+          </div>
+        </div>
+        <div class="item-rate">
         <span class="raiting">Рейтинг: 8,5</span>
         <span class="stars"></span>
+        </div>
       </div>
 
       <div class="catalog-item clearfix">
