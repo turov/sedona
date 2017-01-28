@@ -22,7 +22,6 @@ a {
   text-decoration: none;
 }
 
-
 h1 {
   font-size: 21px;
   line-height: 26px;
@@ -57,7 +56,6 @@ h3 {
 .main-header {
   position: relative;
 }
-
 
 .navigation-list {
   list-style: none;
@@ -100,6 +98,10 @@ h3 {
 
 /* intro */
 
+main img {
+  display: block;
+}
+
 .intro {
   box-sizing: border-box;
   background: url("../img/main-background.jpg") 50% 22% no-repeat;
@@ -113,50 +115,57 @@ h3 {
   margin: 0 auto;
 }
 
-
 /* promo */
 
 .promo {
   text-align: center;
+  padding-top: 65px;
+  padding-bottom: 50px;
 }
 
 .promo h1 {
-padding-top: 65px;         /* ХЭЛП МИ */
-  padding-left: 350px;    /* ХЭЛП МИ */
-  padding-right: 350px;    /* ХЭЛП МИ */
+  margin: 0 auto;
+  max-width: 450px;
+  margin-bottom: 30px;
+
 }
 
 .promo p {
   font-size: 14px;
   line-height: 26px;
   color: #333333;
-  padding-bottom: 50px; /* ХЭЛП МИ */
+  margin: 0 auto;
+  max-width: 500px;
+
 }
 
 /* reasons info */
 
 .reasons-info {
+  box-sizing: border-box;
   float: left;
   width: 400px;
   min-height: 256px;
   background-color: #81b3d2;
   color: #ffffff;
   text-align: center;
+  padding-top: 50px;
 }
 
 .reasons-info h2 {
-  font-color: #ffffff;
-  padding-top: 50px; /* ХЭЛП МИ */
+  width: 170px;
+  margin: 0 auto;
 }
 
 .reasons-info p {
-
+  width: 285px;
+  margin: 0 auto;
 }
 
 .reasons-image {
   float: right;
   width: 800px;
-  min-height:256px;
+  min-height: 256px;
 }
 
 .reasons-bottom .reasons-info {
@@ -171,10 +180,8 @@ padding-top: 65px;         /* ХЭЛП МИ */
 .reasons-bottom .reasons-image {
   float: left;
   width: 800px;
-  min-height:256px;
+  min-height: 256px;
 }
-
-/* проблема: белая полоса перед фичерс */
 
 /* features */
 
@@ -187,40 +194,80 @@ padding-top: 65px;         /* ХЭЛП МИ */
 .feature-item {
   float: left;
   width: 400px;
-  height: 330px;
+
+}
+
+.features-top .feature-item {
+  padding-top: 150px;
+  padding-bottom: 80px;
 }
 
 .feature-item p {
   color: #333333;
+  margin: 0 auto;
+  line-height: 21px;
+  max-width: 290px;
+
+}
+
+.feature-item h2 {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 140px;
+
 }
 
 .features-bottom .feature-item {
   background-color: #eeeeee;
+  padding-top: 45px;
+  padding-bottom: 60px;
 }
 
 /* form hotels */
 
 .form-hotels {
   text-align: center;
+  padding-top: 55px;
+}
+
+.form-hotels h3 {
+  line-height: 30px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .form-hotels a {
+  display: block;
   background: #766357;
-  /* эх, оформить надо как нибудь =) */
-  padding-bottom: 100px;
+  line-height: 26px;
+  font-size: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 35px;
+  padding-bottom: 33px;
+  width: 568px;
+  margin: 0 auto;
+}
+
+.form-hotels p {
+  width: 450px;
+  margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 /* map */
 
+.map {
+  height: 748px;
+}
 
 /* вот тут проблема, ибо футер полупрозрачный и из-него карта проглядывает */
 
 /* футер */
 
-/* проблема: белая полоса перед футером */
-
 .main-footer {
   text-align: center;
+  background-color: rgba(254, 254, 254, 0.9);
 }
 
 .sedona {
@@ -238,7 +285,82 @@ padding-top: 65px;         /* ХЭЛП МИ */
   width: 400px;
 }
 
+/* hotels */
+
+.filters {
+  background: url("../img/catalog-background.jpg") 50% 22% no-repeat;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.filters-left {
+  float: left;
+  width: 160px;
+  min-height: 155px;
+}
+
+.filters-left input {
+
+}
+
+.filter-left label {
+
+}
+
+.filters-center {
+  float: left;
+  width: 160px;
+  min-height: 155px;
+}
+
+.filters-right {
+  float: right;
+  width: 350px;
+  min-height: 155px;
+}
+
+.found {
+  padding-left: 68px;
+  padding-top: 32px;
+  padding-bottom: 33px;
+  padding-right: 20px;
+}
 
 
+.found .found-number {
+  float: left;
+  width: 135px;
+
+}
+.found .found-sort {
+  float: left;
+  width: 875px;
+}
+
+.found .sort-item {
+  display: inline-block;
+}
 
 
+/*каталог меню, проблемы*/
+
+/*каталог */
+
+.catalog-item {
+  box-sizing: border-box;
+  height: 151px;
+  padding: 30px 70px;
+  border-top: #000000 solid 1px;
+}
+
+.catalog-item img {
+  float: left;
+  width: 137px;
+}
+
+.catalog-item h3 {
+  float: left;
+  width: 300px;
+}
