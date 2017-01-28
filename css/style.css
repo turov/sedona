@@ -380,7 +380,7 @@ fieldset {
 
 .catalog-item {
   padding: 30px 70px;
-  border-top: #000000 solid 1px;
+  border-top: #e5e5e5 solid 1px; /* правильно */
 }
 
 .item-img {
@@ -429,11 +429,14 @@ fieldset {
   vertical-align: top;
   font-size: 14px;
   line-height: 21px;
+  font-weight: bold;
   padding: 8px 16px;
-  background: #ffff00;
+  background: #81b3d2;
   margin-right: 6px;
+  color: #ffffff;
 }
 
 .item-btns a:last-child {
   margin-right: 0;
+  background: #766357;
 }
