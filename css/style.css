@@ -18,6 +18,10 @@ body {
   text-transform: uppercase;
 }
 
+.navigation-item a {
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -55,6 +59,7 @@ h3 {
 
 .main-header {
   position: relative;
+  z-index: 2;
 }
 
 .navigation-list {
@@ -103,6 +108,8 @@ main img {
 }
 
 .intro {
+  position: relative;
+  z-index: 1;
   box-sizing: border-box;
   background: url("../img/main-background.jpg") 50% 22% no-repeat;
   min-height: 510px;
@@ -113,6 +120,15 @@ main img {
   width: 458px;
   height: 352px;
   margin: 0 auto;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  background: url("../img/main-pic-bottom.png") no-repeat;
+  bottom: 0;
 }
 
 /* promo */
@@ -129,6 +145,7 @@ main img {
   margin-bottom: 30px;
 
 }
+
 
 .promo p {
   font-size: 14px;
@@ -155,6 +172,14 @@ main img {
 .reasons-info h2 {
   width: 170px;
   margin: 0 auto;
+}
+
+.reasons-info span {
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .reasons-info p {
@@ -194,12 +219,43 @@ main img {
 .feature-item {
   float: left;
   width: 400px;
+  position: relative;
 
 }
 
 .features-top .feature-item {
   padding-top: 150px;
   padding-bottom: 80px;
+}
+
+.feature-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+}
+
+.feature-item-home::before {
+  width: 75px;
+  height: 72px;
+  background-position: -237px -106px;
+  top: 60px;
+}
+
+.feature-item-food::before {
+  width: 74px;
+  height: 70px;
+  background-position: -143px -91px;
+  top: 61px;
+}
+
+.feature-item-gift::before {
+  width: 64px;
+  height: 76px;
+  background-position: -237px -10px;
+  top: 56px;
 }
 
 .feature-item p {
@@ -214,13 +270,19 @@ main img {
   margin: 0 auto;
   margin-bottom: 20px;
   max-width: 140px;
-
 }
 
 .features-bottom .feature-item {
   background-color: #eeeeee;
   padding-top: 45px;
   padding-bottom: 60px;
+}
+
+.feature-item span {
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  padding-bottom: 12px;
 }
 
 /* form hotels */
@@ -238,6 +300,7 @@ main img {
 
 .form-hotels a {
   display: block;
+  text-decoration: none;
   background: #766357;
   line-height: 26px;
   font-size: 21px;
@@ -247,6 +310,7 @@ main img {
   padding-bottom: 33px;
   width: 568px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .form-hotels p {
@@ -261,28 +325,134 @@ main img {
   height: 748px;
 }
 
-/* вот тут проблема, ибо футер полупрозрачный и из-него карта проглядывает */
+
 
 /* футер */
+
+.main-index {
+  position: relative;
+}
 
 .main-footer {
   text-align: center;
   background-color: rgba(254, 254, 254, 0.9);
+  font-size: 0;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.footer-index {
+  position: absolute;
+  bottom: 0;
 }
 
 .sedona {
-  float: left;
+  display: inline-block;
   width: 400px;
+  vertical-align: middle;
+}
+
+.sedona a {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  line-height: 26px;
+  font-size: 21px;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
 }
 
 .social {
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   width: 400px;
+  text-align: center;
+}
+
+.social-btn {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin: 0 2px;
+  font-size: 0;
+  vertical-align: top;
+  text-decoration: none;
+  background: #81b3d2;
+}
+
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+a:active::before {
+  opacity: 0.3;
+}
+
+.social-btn::before {
+  content: "";
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-btn-tw::before {
+  width: 17px;
+  height: 15px;
+  background-position: -142px -198px;
+}
+
+.social-btn-fb::before {
+  width: 10px;
+  height: 19px;
+  background-position: -143px -52px;
+}
+
+.social-btn-youtube::before {
+  width: 20px;
+  height: 16px;
+  background-position: -179px -198px;
 }
 
 .footer-copyright {
-  float: right;
+  display: inline-block;
+  vertical-align: middle;
   width: 400px;
+}
+
+.footer-copyright span {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: normal;
+  line-height: 26px;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.footer-copyright a {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  background: url("../img/spritesheet.png") no-repeat -10px -10px;
+  width: 113px;
+  height: 39px;
+  transition: background-position 0.5s;
+}
+
+.footer-copyright a:hover {
+  background-position: -10px -69px;
+}
+
+.footer-copyright a:active {
+  background-position: -10px -128px;
 }
 
 /* hotels */
@@ -394,6 +564,10 @@ fieldset {
   border-top: #e5e5e5 solid 1px; /* правильно */
 }
 
+.catalog-item:last-child {
+  border-bottom: #e5e5e5 solid 1px;
+}
+
 .item-img {
   float: left;
   width: 137px;
@@ -408,7 +582,52 @@ fieldset {
 .item-rate {
   float: right;
   width: 150px;
+  position: relative;
+  padding-top: 60px;
+  text-align: right;
 }
+
+.item-rate::before {
+  position: absolute;
+  content: "";
+  background: url("../img/spritesheet.png") no-repeat -10px -198px;
+  width: 112px;
+  height: 17px;
+  top: 0;
+  right: 0;
+}
+
+.item-rate span {
+  font-size: 14px;
+  line-height: 21px;
+  background-color: #f2f2f2;
+  color: #666666;
+  padding-top: 4px;
+  padding-left: 15px;
+  padding-right: 13px;
+  padding-bottom: 6px;
+}
+
+.star-5::before {
+  width: 112px;
+}
+
+.star-4::before {
+  width: 90px;
+}
+
+.star-3::before {
+  width: 68px;
+}
+
+.star-2::before {
+  width: 46px;
+}
+
+.star-1::before {
+  width: 24px;
+}
+
 
 .item-type {
   font-size: 0;
@@ -451,3 +670,4 @@ fieldset {
   margin-right: 0;
   background: #766357;
 }
+
