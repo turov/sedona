@@ -550,10 +550,19 @@ fieldset {
 }
 .sort-btn {
   display: inline-block;
-  line-height: 18px;
-  font-size: 12px;
+  font-size: 0;
   vertical-align: top;
 }
+
+
+.sort-btn-up {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5.5px 0 5.5px;
+  border-color: #81b3d2 transparent transparent transparent;
+}
+
 
 /*каталог меню, проблемы*/
 
