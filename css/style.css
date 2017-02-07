@@ -460,16 +460,66 @@ a:active::before {
 
 .modal-content {
   position: absolute;
+  text-align: left;
   z-index: 3;
   top: 326px;
   left: 316px;
-
-  width: 408px;
-  padding: 50px 80px;
+  box-sizing: border-box;
+  width: 568px;
+  padding: 50px 55px;
 
   color: #000000;
 
   background: #ffffff;
+}
+
+.book-field input {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 8px 13px;
+  padding-right: 40px;
+  background: #f2f2f2;
+  border: none;
+  width: 324px;
+  margin-left: 22px;
+}
+
+.book-field-3 {
+  float: left;
+  width: 226px;
+}
+
+
+.book-field-3 input {
+  width: 20px;
+}
+
+.book-field-4 {
+  float: right;
+  width: 226px;
+}
+
+.book-field-4 input {
+  width: 20px;
+}
+
+.book-find {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  background: #81b3d2;
+  line-height: 26px;
+  font-size: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 19px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 54px;
+  cursor: pointer;
+
 }
 
 /* hotels */
@@ -648,8 +698,11 @@ input[type="checkbox"]:checked + label::after {
 
 .sort-btn {
   display: inline-block;
-  font-size: 0;
-  vertical-align: top;
+  vertical-align: middle;
+}
+
+.sort-btn a {
+  display: block;
 }
 
 .sort-btn-up {

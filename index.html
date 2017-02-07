@@ -9,24 +9,24 @@
 <body>
 <div class="wrapper">
   <header class="main-header">
-      <nav class="main-navigation">
-        <ul class="navigation-list clearfix">
-          <li class="navigation-item">
-            <a href="#">Информация</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#">Фото и видео</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#">Гостиницы</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#">Карта Штата</a>
-          </li>
-        </ul>
-      </nav>
+    <nav class="main-navigation">
+      <ul class="navigation-list clearfix">
+        <li class="navigation-item">
+          <a href="#">Информация</a>
+        </li>
+        <li class="navigation-item">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="navigation-item">
+          <a href="#">Гостиницы</a>
+        </li>
+        <li class="navigation-item">
+          <a href="#">Карта Штата</a>
+        </li>
+      </ul>
+    </nav>
     <div class="mini-logo">
-    <a><img src="img/mini-logo.png" width="138" height="70" alt="sedona"></a>
+      <a><img src="img/mini-logo.png" width="138" height="70" alt="sedona"></a>
     </div>
   </header>
 
@@ -98,35 +98,51 @@
         <p>Большинство едет в Гранд Каньон и толпится там!</p>
       </div>
     </div>
-<div class="form-hotels-index">
-    <div class="form-hotels">
-      <h3>Заинтересовались?</h3>
-      <p>Укажите предполагаемые даты поездки,
-        и мы покажем Вам лучшие предложения гостиниц в Седоне
-      </p>
-      <a href="#">Поиск гостиницы в Седоне</a>
+    <div class="form-hotels-index">
+      <div class="form-hotels">
+        <h3>Заинтересовались?</h3>
+        <p>Укажите предполагаемые даты поездки,
+          и мы покажем Вам лучшие предложения гостиниц в Седоне
+        </p>
+        <a href="#">Поиск гостиницы в Седоне</a>
+      </div>
+      <!-- Форма -->
+
+      <div class="modal-content">
+        <form class="book-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="book-field book-field-1">
+            <label for="arrival-date">Дата заезда:</label>
+            <input class="arrival" type="date" name="arrival-date" id="arrival-date">
+          </div>
+          <div class="book-field book-field-2">
+            <label for="departure-date">Дата выезда:</label>
+            <input class="departure" type="date" name="departure-date" id="departure-date">
+          </div>
+          <div class="people clearfix">
+          <div class="book-field book-field-3">
+            <label for="adult">Взрослые:</label>
+              <a href="#" class="icon-menus"></a>
+              <input class="number" type="number" name="adult" id="adult" placeholder ="2">
+              <a href="#" class="icon-plus"></a>
+            </div>
+          <div class="book-field book-field-4">
+              <label for="kids">Дети:</label>
+              <a href="#" class="icon-menus"></a>
+              <input class="number" type="number" name="kids" id="kids" placeholder ="0">
+              <a href="#" class="icon-plus"></a>
+            </div>
+          </div>
+          <a href="#" class="book-find">Найти</a>
+        </form>
+
+      </div>
     </div>
-  <!-- Форма -->
 
-  <div class="modal-content">
-    <form class="book-form" action="https://echo.htmlacademy.ru" method="post">
-      <input class="arrival" type="date" name="arrival-date" id="arrival-date">
-      <label for="arrival-date">Дата заезда</label>
-      <input class="departure" type="date" name="departure-date" id="departure-date">
-      <label for="departure-date">Дата выезда</label>
-
-  
-      <a href="#">Найти</a>
-    </form>
-
-  </div>
-</div>
+    <!-- Карта -->
 
     <div class="sedona-map">
       <img src="img/map.jpg" width="1200" height="593" alt="карта">
     </div>
-
-
 
 
     <footer class="main-footer footer-index">
