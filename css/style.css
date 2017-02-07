@@ -72,8 +72,8 @@ h3 {
   float: left;
   width: 240px;
   text-align: center;
-  padding-top: 16px;
-  padding-bottom: 18px;
+  padding-top: 14px;
+  padding-bottom: 16px;
 }
 
 .navigation-item:last-child {
@@ -89,6 +89,28 @@ h3 {
   color: #000000;
   font-weight: bold;
   line-height: 26px;
+}
+
+.navigation-item-active a {
+  color: #766357;
+}
+
+.navigation-item a:hover {
+  color: #81b3d2;
+}
+
+.navigation-item-active a:hover {
+  color: #766357;
+}
+
+.navigation-item a:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.navigation-item-active a:active {
+  color: #766357;
+  opacity: 1;
 }
 
 /* mini logo */
@@ -112,7 +134,7 @@ main img {
   z-index: 1;
   box-sizing: border-box;
   background: url("../img/main-background.jpg") 50% 22% no-repeat;
-  min-height: 510px;
+  min-height: 508px;
   padding-top: 76px;
 }
 
@@ -135,14 +157,17 @@ main img {
 
 .promo {
   text-align: center;
-  padding-top: 65px;
+  padding-top: 60px;
   padding-bottom: 50px;
 }
 
 .promo h1 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
   margin: 0 auto;
   max-width: 450px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
 }
 
@@ -165,11 +190,11 @@ main img {
   background-color: #81b3d2;
   color: #ffffff;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 56px;
 }
 
 .reasons-info h2 {
-  width: 170px;
+  width: 151px;
   margin: 0 auto;
 }
 
@@ -177,13 +202,15 @@ main img {
   display: block;
   font-size: 14px;
   line-height: 21px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 23px;
+  padding-bottom: 20px;
 }
 
 .reasons-info p {
   width: 285px;
   margin: 0 auto;
+  line-height: 21px;
+  font-size: 14px;
 }
 
 .reasons-image {
@@ -207,6 +234,10 @@ main img {
   min-height: 256px;
 }
 
+.reasons-bottom p {
+  width: 305px;
+}
+
 /* features */
 
 .features {
@@ -223,8 +254,8 @@ main img {
 }
 
 .features-top .feature-item {
-  padding-top: 150px;
-  padding-bottom: 80px;
+  padding-top: 162px;
+  padding-bottom: 82px;
 }
 
 .feature-item::before {
@@ -267,13 +298,13 @@ main img {
 
 .feature-item h2 {
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   max-width: 140px;
 }
 
 .features-bottom .feature-item {
   background-color: #eeeeee;
-  padding-top: 45px;
+  padding-top: 47px;
   padding-bottom: 60px;
 }
 
@@ -281,24 +312,28 @@ main img {
   display: block;
   font-size: 14px;
   line-height: 21px;
-  padding-bottom: 12px;
+  padding-bottom: 21px;
+}
+
+.features-bottom p {
+  max-width: 275px;
 }
 
 /* form hotels */
 
-.form-hotels-index {
-  position: relative;
-}
 
 .form-hotels {
   text-align: center;
-  padding-top: 55px;
+  padding-top: 52px;
+  position: relative;
 }
 
-.form-hotels h3 {
-  line-height: 30px;
-  font-size: 24px;
+.form-hotels span {
+  line-height: 30px;  /* по макету line-height: 24px */
+  font-size: 30px;
   font-weight: bold;
+  margin-bottom: 27px;
+  display: block;
 }
 
 .form-hotels a {
@@ -309,8 +344,8 @@ main img {
   font-size: 21px;
   font-weight: bold;
   color: #ffffff;
-  padding-top: 35px;
-  padding-bottom: 33px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: 568px;
   margin: 0 auto;
   cursor: pointer;
@@ -319,7 +354,7 @@ main img {
 .form-hotels p {
   width: 450px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 47px;
 }
 
 /* map */
@@ -462,8 +497,9 @@ a:active::before {
   position: absolute;
   text-align: left;
   z-index: 3;
-  top: 326px;
-  left: 316px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,100%);
   box-sizing: border-box;
   width: 568px;
   padding: 50px 55px;
@@ -485,23 +521,60 @@ a:active::before {
   margin-left: 22px;
 }
 
-.book-field-3 {
+
+
+.book-field-adult {
   float: left;
   width: 226px;
+  vertical-align: top;
 }
 
-
-.book-field-3 input {
-  width: 20px;
-}
-
-.book-field-4 {
+.book-field-kids {
   float: right;
   width: 226px;
 }
 
-.book-field-4 input {
+.book-field-kids input {
   width: 20px;
+}
+
+.book-field-adult label {
+  display: inline-block;
+  margin-right: 36px;
+}
+
+.book-field-adult .controls {
+  display: inline-block;
+  font-size: 0;
+}
+
+.controls button {
+  display: inline-block;
+  background: #f2f2f2;
+  border: none;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 8px;
+}
+
+.controls input {
+  display: inline-block;
+  font-size: 14;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+}
+
+
+
+
+.book-field label {
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .book-find {
@@ -519,6 +592,7 @@ a:active::before {
   margin: 0 auto;
   margin-top: 54px;
   cursor: pointer;
+  border: none;
 
 }
 
