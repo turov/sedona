@@ -66,16 +66,29 @@
         </fieldset>
         <fieldset class="filters-group filters-right">
           <legend>Стоимость в сутки (р):</legend>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+          <button class="btn-transparent" type="submit">Показать</button>
+        <!--
+        <fieldset class="filters-group filters-right">
+          <legend>Стоимость в сутки (р):</legend>
           <div class="price-range">
             <span>От 0</span>
             <span>До 3000</span>
-            <!--Вот тут надо чтоб в спан шло значение из рэнж-->
-
           </div>
-
           <input type="range" name="price-per-day" id="price-per-day" min="0" max="4000" step="100">
           <button type="submit">ПОКАЗАТЬ</button>
         </fieldset>
+        -->
       </form>
     </div>
 
