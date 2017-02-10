@@ -408,8 +408,8 @@ main img {
 .social-btn {
   position: relative;
   display: inline-block;
-  width: 43px;
-  height: 43px;
+  width: 48px;
+  height: 48px;
   margin: 0 2px;
   font-size: 0;
   vertical-align: top;
@@ -763,19 +763,21 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .filters-right {
   float: right;
-  width: 350px;
+  width: 340px;
   min-height: 155px;
 }
 
 .filters-right legend {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
+  margin-bottom: 10px;
+}
+
+.price-wrap {
+  padding: 0px 11px;
 }
 
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 32px;
   margin-bottom: 20px;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -796,15 +798,19 @@ input[type="checkbox"]:disabled:checked + label::after {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 30px;
   vertical-align: top;
   cursor: pointer;
 }
 
-.price-controls .min-price,
+.price-controls .min-price {
+  width: 90px;
+  padding-left: 64px;
+}
+
 .price-controls .max-price {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 55px;
 }
 
 .price-controls input {
@@ -859,7 +865,7 @@ input[type="checkbox"]:disabled:checked + label::after {
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 33px 5px 35px;
 
   font-size: 14px;
   line-height: 20px;
@@ -884,7 +890,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   padding-left: 71px;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-right: 20px;
+  padding-right: 73px;
 }
 
 .found .found-number {
@@ -948,9 +954,14 @@ input[type="checkbox"]:disabled:checked + label::after {
 .sort-list-direct {
   font-size: 0;
   float: right;
-  width: 100px;
+  width: 34px;
   padding: 0;
   margin: 0;
+  margin-top: 2px;
+}
+
+.sort-list-direct li:first-child {
+  margin-right: 14px;
 }
 
 .sort-item a:active {
@@ -983,22 +994,29 @@ input[type="checkbox"]:disabled:checked + label::after {
   border-color: transparent transparent #cccccc transparent;
 }
 
-.sort-btn-up + .sort-btn-active {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 5.5px 0 5.5px;
+.sort-btn-up:hover {
+  border-color: #000000 transparent transparent transparent;
+}
+
+.sort-btn-down:hover {
+  border-color: transparent transparent #000000  transparent;
+}
+
+.sort-btn-up:active {
   border-color: #81b3d2 transparent transparent transparent;
 }
 
-.sort-btn-down + .sort-btn-active {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 5.5px 10px 5.5px;
+.sort-btn-down:active {
   border-color: transparent transparent #81b3d2 transparent;
 }
 
+.sort-btn-down.sort-btn-active {
+  border-color: transparent transparent #81b3d2  transparent;
+}
+
+.sort-btn-up.sort-btn-active {
+  border-color: #81b3d2 transparent transparent transparent;
+}
 /*каталог меню, проблемы*/
 
 /*каталог */

@@ -45,7 +45,7 @@
             <label for="parking">Парковка</label>
           </div>
           <div class="filters-checkox">
-            <input type="checkbox" name="wifi" id="wifi">
+            <input type="checkbox" name="wifi" id="wifi" disabled>
             <label for="wifi">Wi-Fi</label>
           </div>
         </fieldset>
@@ -56,7 +56,7 @@
             <label for="hotel">Гостиница</label>
           </div>
           <div class="filters-checkox">
-            <input type="checkbox" name="motel" id="motel" checked>
+            <input type="checkbox" name="motel" id="motel" checked disabled>
             <label for="motel">Мотель</label>
           </div>
           <div class="filters-checkox">
@@ -66,29 +66,32 @@
         </fieldset>
         <fieldset class="filters-group filters-right">
           <legend>Стоимость в сутки (р):</legend>
-          <div class="price-controls">
-            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
-          </div>
-          <div class="range-controls">
-            <div class="scale">
-              <div class="bar"></div>
+          <div class="price-wrap">
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
             </div>
-            <div class="range-toggle range-toggle-min"></div>
-            <div class="range-toggle range-toggle-max"></div>
+
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
           </div>
           <button class="btn-transparent" type="submit">Показать</button>
-        <!--
-        <fieldset class="filters-group filters-right">
-          <legend>Стоимость в сутки (р):</legend>
-          <div class="price-range">
-            <span>От 0</span>
-            <span>До 3000</span>
-          </div>
-          <input type="range" name="price-per-day" id="price-per-day" min="0" max="4000" step="100">
-          <button type="submit">ПОКАЗАТЬ</button>
-        </fieldset>
-        -->
+          <!--
+          <fieldset class="filters-group filters-right">
+            <legend>Стоимость в сутки (р):</legend>
+            <div class="price-range">
+              <span>От 0</span>
+              <span>До 3000</span>
+            </div>
+            <input type="range" name="price-per-day" id="price-per-day" min="0" max="4000" step="100">
+            <button type="submit">ПОКАЗАТЬ</button>
+          </fieldset>
+          -->
       </form>
     </div>
 
@@ -112,10 +115,10 @@
       </ul>
       <ul class="sort-list-direct">
         <li class="sort-btn">
-          <a href="#" class="sort-btn-down sort-btn-active">down</a>
+          <a href="#" class="sort-btn-down">По возрастанию</a>
         </li>
         <li class="sort-btn">
-          <a href="#" class="sort-btn-up">up</a>
+          <a href="#" class="sort-btn-up sort-btn-active">По убыванию</a>
         </li>
       </ul>
     </div>
