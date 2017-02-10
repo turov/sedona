@@ -321,7 +321,6 @@ main img {
 
 /* form hotels */
 
-
 .form-hotels {
   text-align: center;
   padding-top: 52px;
@@ -329,7 +328,7 @@ main img {
 }
 
 .form-hotels span {
-  line-height: 30px;  /* по макету line-height: 24px */
+  line-height: 30px; /* по макету line-height: 24px */
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 27px;
@@ -499,102 +498,105 @@ a:active::before {
   z-index: 3;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%,100%);
+  transform: translate(-50%, 100%);
   box-sizing: border-box;
   width: 568px;
-  padding: 50px 55px;
+  padding: 53px 56px;
 
   color: #000000;
 
   background: #ffffff;
 }
 
+.people {
+  font-size: 0;
+}
+
+.book-field {
+  margin-bottom: 25px;
+  font-size: 0;
+}
+
 .book-field input {
   box-sizing: border-box;
   margin: 0;
-  margin-bottom: 29px;
-  padding: 8px 13px;
+  padding: 6px 12px;
   padding-right: 40px;
   background: #f2f2f2;
+  border: 2px solid #F2F2F2;
+  width: 100%;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.book-field input:focus {
+  background: transparent;
+
+}
+
+.book-controls {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 346px;
+}
+
+.book-controls button {
+  font-size: 0;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: 0 -329px;
   border: none;
-  width: 324px;
-  margin-left: 22px;
+  background-color: transparent;
 }
 
-
-/*
-.book-field-adult {
-  float: left;
-  width: 226px;
-  vertical-align: top;
-}
-
-.book-field-kids {
-  float: right;
-  width: 226px;
-}
-*/
-
-
-
-
-.book-field-adult {
+.book-field label {
   display: inline-block;
-  width: 250px;
-  box-sizing: border-box;
-}
-.book-field-adult label {
-  margin-right: 40px;
-  text-align: left;
   vertical-align: middle;
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 110px;
 }
 
-.book-field-adult .controls {
-  display: inline-block;
+.people {
   font-size: 0;
 }
 
-.book-field-kids {
-  display: inline-block;
-  box-sizing: border-box;
-}
-.book-field-kids label {
-  margin-right: 40px;
-  text-align: left;
-  vertical-align: middle;
+.people .book-field {
+  width: 50%;
 }
 
-.book-field-kids .controls {
+.controls {
   display: inline-block;
-  font-size: 0;
+  vertical-align: middle;
 }
 
 .controls button {
   display: inline-block;
-  vertical-align: top;
-  width: 38px;
-  height: 42px;
-  margin: 0;
-  font-size: 14px;
-  line-height: 38px;
-  text-align: center;
+  vertical-align: middle;
   background-color: #F2F2F2;
-  text-decoration: none;
   border: none;
+  width: 38px;
+  height: 38px;
 }
 
 .controls input {
   display: inline-block;
-  font-size: 14;
-  line-height: 26px;
-  font-weight: bold;
-  color: #000000;
-  width: 38px;
-  min-height: 36px;
-  margin-left: -4px;
+  vertical-align: middle;
   text-align: center;
-
   background-color: #F2F2F2;
+  width: 38px;
+  height: 38px;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 /*
@@ -624,12 +626,6 @@ a:active::before {
 
 */
 
-.book-field label {
-  line-height: 26px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
 .book-find {
   text-align: center;
   display: block;
@@ -650,7 +646,6 @@ a:active::before {
 }
 
 /* hotels */
-
 
 fieldset {
   border: none;
@@ -707,7 +702,7 @@ input[type="checkbox"] + label {
   display: block;
   margin: 10px 0;
   line-height: 20px;
-  padding-left: 40px;
+  padding-left: 42px;
   position: relative;
   cursor: pointer;
 }
