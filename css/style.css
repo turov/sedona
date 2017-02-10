@@ -663,11 +663,11 @@ fieldset {
 }
 
 .filters-left {
-  margin-right: 70px;
+  margin-right: 94px;
 }
 
 .filters-group legend {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   line-height: 21px;
   font-size: 16px;
   font-weight: bold;
@@ -682,14 +682,14 @@ fieldset {
 }
 
 .filters-checkox {
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .filters {
   background: url("../img/catalog-background.jpg") 50% 22% no-repeat;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 72px;
+  padding-top: 27px;
+  padding-bottom: 7px;
+  padding-left: 71px;
   padding-right: 60px;
 }
 
@@ -697,14 +697,6 @@ fieldset {
   float: left;
   width: 160px;
   min-height: 155px;
-}
-
-.filters-left input {
-
-}
-
-.filter-left label {
-
 }
 
 input[type="checkbox"] {
@@ -715,7 +707,7 @@ input[type="checkbox"] + label {
   display: block;
   margin: 10px 0;
   line-height: 20px;
-  padding-left: 45px;
+  padding-left: 40px;
   position: relative;
   cursor: pointer;
 }
@@ -742,6 +734,30 @@ input[type="checkbox"]:checked + label::after {
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
   background-position: -185px -10px;
+}
+
+input[type="checkbox"]:disabled + label::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: 0 -371px;
+}
+
+input[type="checkbox"]:disabled:checked + label::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: 0 -413px;
 }
 
 .filters-center {
@@ -870,9 +886,9 @@ input[type="checkbox"]:checked + label::after {
 /* следующий блок */
 
 .found {
-  padding-left: 68px;
-  padding-top: 32px;
-  padding-bottom: 33px;
+  padding-left: 71px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   padding-right: 20px;
 }
 
@@ -892,6 +908,10 @@ input[type="checkbox"]:checked + label::after {
 .found .found-sort {
   float: left;
   width: 90px;
+  line-height: 18px;
+  font-size: 12px;
+  padding-top: 6px;
+  padding-left: 30px;
 }
 
 .sort-list {
@@ -905,7 +925,9 @@ input[type="checkbox"]:checked + label::after {
 .sort-item {
   display: inline-block;
   vertical-align: top;
-  padding-top: 4px;
+  line-height: 18px;
+  font-size: 12px;
+  padding-top: 6px;
 
 }
 
@@ -922,7 +944,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .sort-item-active a {
-  margin-left: 39px;
+  margin-left: 24px;
   text-decoration: none;
   color: #81b3d2;
   border-bottom: none;
@@ -934,6 +956,11 @@ input[type="checkbox"]:checked + label::after {
   width: 100px;
   padding: 0;
   margin: 0;
+}
+
+.sort-item a:active {
+  border-bottom: none;
+  color: #000000;
 }
 
 .sort-btn {
@@ -950,7 +977,7 @@ input[type="checkbox"]:checked + label::after {
   height: 0;
   border-style: solid;
   border-width: 10px 5.5px 0 5.5px;
-  border-color: #81b3d2 transparent transparent transparent;
+  border-color: #cccccc transparent transparent transparent;
 }
 
 .sort-btn-down {
@@ -959,6 +986,22 @@ input[type="checkbox"]:checked + label::after {
   border-style: solid;
   border-width: 0 5.5px 10px 5.5px;
   border-color: transparent transparent #cccccc transparent;
+}
+
+.sort-btn-up + .sort-btn-active {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5.5px 0 5.5px;
+  border-color: #81b3d2 transparent transparent transparent;
+}
+
+.sort-btn-down + .sort-btn-active {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5.5px 10px 5.5px;
+  border-color: transparent transparent #81b3d2 transparent;
 }
 
 /*каталог меню, проблемы*/
@@ -977,7 +1020,8 @@ input[type="checkbox"]:checked + label::after {
 .item-img {
   float: left;
   width: 137px;
-  margin-right: 30px;
+  padding-left: 2px;
+  margin-right: 28px;
 }
 
 .item-info {
@@ -989,7 +1033,7 @@ input[type="checkbox"]:checked + label::after {
   float: right;
   width: 150px;
   position: relative;
-  padding-top: 60px;
+  padding-top: 64px;
   text-align: right;
 }
 
@@ -1009,8 +1053,8 @@ input[type="checkbox"]:checked + label::after {
   background-color: #f2f2f2;
   color: #666666;
   padding-top: 4px;
-  padding-left: 15px;
-  padding-right: 13px;
+  padding-left: 16px;
+  padding-right: 15px;
   padding-bottom: 6px;
 }
 
@@ -1045,6 +1089,7 @@ input[type="checkbox"]:checked + label::after {
   line-height: 21px;
   width: 110px;
   margin-right: 6px; /* точно */
+  margin-bottom: 14px;
 }
 
 .item-type span:last-child {
@@ -1053,6 +1098,8 @@ input[type="checkbox"]:checked + label::after {
 
 .item-info h3 {
   margin: 0;
+  margin-top: -5px;
+  margin-bottom: 7px;
 }
 
 .item-btns {
@@ -1065,9 +1112,9 @@ input[type="checkbox"]:checked + label::after {
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 3px 16px;
   background: #81b3d2;
-  margin-right: 6px;
+  margin-right: 8px;
   color: #ffffff;
 }
 
@@ -1076,3 +1123,30 @@ input[type="checkbox"]:checked + label::after {
   background: #766357;
 }
 
+.item-btn-left:hover {
+  background: #669ec0;
+}
+
+.item-btn-left:active {
+  background: #5496bd;
+  color: #81b3d2;
+}
+
+.item-btns a:last-child:hover {
+  background: #604e43;
+}
+
+.item-btns a:last-child:active {
+  background: #503e33;
+  color: #766357;
+}
+
+.item-info h3:hover {
+  color: #81b3d2;
+  cursor: pointer;
+}
+
+.item-info h3:active {
+  color: #cacaca;
+  cursor: pointer;
+}
