@@ -16,6 +16,7 @@ body {
   line-height: 24px;
   color: #000000;
   text-transform: uppercase;
+  min-width: 1200px;
 }
 
 .navigation-item a {
@@ -26,19 +27,19 @@ a {
   text-decoration: none;
 }
 
-h1 {
+.wrapper h1 {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
 }
 
-h2 {
+.wrapper h2 {
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
 }
 
-h3 {
+.wrapper h3 {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -115,6 +116,7 @@ h3 {
 
 /* mini logo */
 .mini-logo {
+  display: block;
   width: 138px;
   height: 70px;
   position: absolute;
@@ -123,9 +125,14 @@ h3 {
   transform: translateX(-50%);
 }
 
+.mini-logo img {
+  width: 100%;
+  height: 100%;
+}
+
 /* intro */
 
-main img {
+.wrapper img {
   display: block;
 }
 
@@ -133,7 +140,7 @@ main img {
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  background: url("../img/main-background.jpg") 50% 22% no-repeat;
+  background: #81B3D2 url("../img/main-background.jpg") 50% 22% no-repeat;
   min-height: 508px;
   padding-top: 76px;
 }
@@ -142,6 +149,11 @@ main img {
   width: 458px;
   height: 352px;
   margin: 0 auto;
+}
+
+.intro-logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .intro::before {
@@ -180,7 +192,11 @@ main img {
 
 }
 
-/* reasons info */
+/* reasons */
+
+.reasons {
+  background-color: #81b3d2;
+}
 
 .reasons-info {
   box-sizing: border-box;
@@ -191,6 +207,7 @@ main img {
   color: #ffffff;
   text-align: center;
   padding-top: 56px;
+  padding-bottom: 20px;
 }
 
 .reasons-info h2 {
@@ -214,9 +231,15 @@ main img {
 }
 
 .reasons-image {
+  background-color: #604e43;
   float: right;
   width: 800px;
   min-height: 256px;
+}
+
+.reasons-image img {
+  width: 100%;
+  height: 100%;
 }
 
 .reasons-bottom .reasons-info {
@@ -364,6 +387,13 @@ main img {
 
 .sedona-map {
   position: relative;
+  width: 1200px;
+  height: 593px;
+}
+
+.sedona-map img {
+  width: 100%;
+  height: 100%;
 }
 
 .sedona-map iframe {
@@ -371,6 +401,7 @@ main img {
   top: 0;
   left: 0;
 }
+
 /* футер */
 
 .main-index {
@@ -598,9 +629,8 @@ a:active::before {
   border: none;
   width: 39px;
   height: 38px;
+  cursor: pointer;
 }
-
-
 
 .controls input {
   display: inline-block;
@@ -668,6 +698,7 @@ a:active::before {
 .icon-minus:hover::before {
   background-position: 0 -455px;
 }
+
 .icon-minus:active::before {
   background-position: 0 -478px;
 }
@@ -675,14 +706,16 @@ a:active::before {
 .icon-plus:hover::before {
   background-position: 0 -524px;
 }
+
 .icon-plus:active::before {
   background-position: 0 -555px;
 }
 
-
 .calendar:hover {
   background-position: 0 -245px;
+  cursor: pointer;
 }
+
 .calendar:active {
   background-position: 0 -287px;
 }
@@ -690,10 +723,10 @@ a:active::before {
 .modal-content {
   display: none;
 }
+
 .modal-content-show {
   display: block;
 }
-
 
 /* hotels */
 
@@ -731,7 +764,7 @@ fieldset {
 }
 
 .filters {
-  background: url("../img/catalog-background.jpg") 50% 22% no-repeat;
+  background: #604e43 url("../img/catalog-background.jpg") 50% 22% no-repeat;
   padding-top: 27px;
   padding-bottom: 7px;
   padding-left: 71px;
@@ -822,7 +855,7 @@ input[type="checkbox"]:disabled:checked + label::after {
 }
 
 .price-wrap {
-  padding: 0px 11px;
+  padding: 0 11px;
 }
 
 .price-controls {
@@ -933,8 +966,6 @@ input[type="checkbox"]:disabled:checked + label::after {
 
   background: #ffffff;
 }
-
-
 
 @keyframes show {
   from {
@@ -1086,7 +1117,7 @@ input[type="checkbox"]:disabled:checked + label::after {
 }
 
 .sort-btn-down:hover {
-  border-color: transparent transparent #000000  transparent;
+  border-color: transparent transparent #000000 transparent;
 }
 
 .sort-btn-up:active {
@@ -1098,12 +1129,13 @@ input[type="checkbox"]:disabled:checked + label::after {
 }
 
 .sort-btn-down.sort-btn-active {
-  border-color: transparent transparent #81b3d2  transparent;
+  border-color: transparent transparent #81b3d2 transparent;
 }
 
 .sort-btn-up.sort-btn-active {
   border-color: #81b3d2 transparent transparent transparent;
 }
+
 /*каталог меню, проблемы*/
 
 /*каталог */
@@ -1120,13 +1152,19 @@ input[type="checkbox"]:disabled:checked + label::after {
 .item-img {
   float: left;
   width: 137px;
+  height: 90px;
   padding-left: 2px;
   margin-right: 28px;
 }
 
+.item-img img {
+  width: 100%;
+  height: 100%;
+}
+
 .item-info {
   float: left;
-  width: 260px;
+  width: 400px;
 }
 
 .item-rate {
@@ -1190,6 +1228,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 110px;
   margin-right: 6px; /* точно */
   margin-bottom: 14px;
+  color: #333333;
 }
 
 .item-type span:last-child {

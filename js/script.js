@@ -8,13 +8,13 @@ var search = document.querySelector(".book-find");
 
 form.classList.remove("modal-content-show");
 
-link.addEventListener("click", function(event) {
+link.addEventListener("click", function (event) {
   event.preventDefault();
   form.classList.toggle("modal-content-show");
   arrival.focus();
 });
 
-search.addEventListener("click", function(event) {
+search.addEventListener("click", function (event) {
   form.classList.remove("modal-error");
   form.offsetWidth = form.offsetWidth;
   if (!(arrival.value && departure.value && adult.value && kids.value)) {
@@ -23,7 +23,7 @@ search.addEventListener("click", function(event) {
   }
 });
 
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", function (event) {
   if (event.keyCode == 27) {
     if (form.classList.contains("modal-content-show")) {
       form.classList.remove("modal-content-show");
