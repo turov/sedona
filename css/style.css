@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "PT Sans"; /* Имя шрифта */
-  src: url("../fonts/ptsans.woff2"); /* Путь к файлу со шрифтом */
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2"), url("../fonts/ptsans.woff");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "PT Sans"; /* Имя шрифта */
-  src: url("../fonts/ptsansbold.woff2"); /* Путь к файлу со шрифтом */
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2"), url("../fonts/ptsansbold.woff");
   font-weight: bold;
 }
 
@@ -66,23 +66,26 @@ a {
 .navigation-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 72px;
 }
 
 .navigation-item {
   float: left;
   width: 240px;
-  text-align: center;
   padding-top: 14px;
   padding-bottom: 16px;
+  text-align: left;
 }
 
 .navigation-item:last-child {
   float: right;
+  text-align: right;
+  padding-right: 3px;
 }
 
 .navigation-item:nth-child(3) {
   float: right;
+  text-align: right;
 }
 
 .navigation-item a {
@@ -114,7 +117,6 @@ a {
   opacity: 1;
 }
 
-/* mini logo */
 .mini-logo {
   display: block;
   width: 138px;
@@ -349,7 +351,7 @@ a {
 }
 
 .form-hotels span {
-  line-height: 30px; /* по макету line-height: 24px */
+  line-height: 30px;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 27px;
@@ -409,7 +411,7 @@ a {
   left: 0;
 }
 
-/* футер */
+/* footer */
 
 .main-index {
   position: relative;
@@ -539,7 +541,7 @@ a:active::before {
   background-position: -10px -128px;
 }
 
-/* Всплывающая форма */
+/* modal form */
 
 .modal-content {
   display: none;
@@ -971,7 +973,6 @@ input[type="checkbox"]:disabled:checked + label::after {
   left: 80%;
 }
 
-
 .btn-transparent {
   display: block;
   padding-top: 6px;
@@ -1067,7 +1068,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   animation-duration: 1s;
 }
 
-/* следующий блок */
+/* found */
 
 .found {
   padding-left: 71px;
@@ -1079,7 +1080,6 @@ input[type="checkbox"]:disabled:checked + label::after {
 .found .found-number {
   float: left;
   width: 135px;
-
 }
 
 .found-number {
@@ -1112,7 +1112,6 @@ input[type="checkbox"]:disabled:checked + label::after {
   line-height: 18px;
   font-size: 12px;
   padding-top: 6px;
-
 }
 
 .sort-item a {
@@ -1201,7 +1200,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   border-color: #81b3d2 transparent transparent transparent;
 }
 
-/*каталог */
+/* catalog */
 
 .catalog-item {
   padding: 30px 70px;
@@ -1289,7 +1288,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   font-size: 14px;
   line-height: 21px;
   width: 110px;
-  margin-right: 6px; /* точно */
+  margin-right: 6px;
   margin-bottom: 14px;
   color: #333333;
 }
