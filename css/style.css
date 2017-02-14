@@ -661,6 +661,7 @@ a:active::before {
   margin-top: 26px;
   cursor: pointer;
   border: none;
+  text-transform: uppercase;
 
 }
 
