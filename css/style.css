@@ -325,8 +325,11 @@ a {
   max-width: 140px;
 }
 
-.features-bottom .feature-item {
+.features-bottom {
   background-color: #eeeeee;
+}
+
+.features-bottom .feature-item {
   padding-top: 47px;
   padding-bottom: 60px;
 }
@@ -398,6 +401,7 @@ a {
   position: relative;
   width: 1200px;
   height: 593px;
+  background-color: #CBDDA9;
 }
 
 .sedona-map img {
@@ -426,8 +430,8 @@ a {
 }
 
 .footer-index {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  margin-top: -120px;
 }
 
 .sedona {
@@ -581,6 +585,7 @@ a:active::before {
   font-weight: bold;
   color: #000000;
   min-height: 41px;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .book-field input:hover {
@@ -703,14 +708,15 @@ a:active::before {
   font-size: 21px;
   font-weight: bold;
   color: #ffffff;
-  padding-top: 14px;
-  padding-bottom: 19px;
+  padding-top: 17px;
+  padding-bottom: 15px;
   width: 100%;
   margin: 0 auto;
-  margin-top: 26px;
+  margin-top: 23px;
   cursor: pointer;
   border: none;
   text-transform: uppercase;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .book-find:hover {
@@ -753,6 +759,7 @@ a:active::before {
 
 .modal-content-show {
   display: block;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 /* hotels */
@@ -828,39 +835,17 @@ input[type="checkbox"] + label::before {
   background-position: -143px -10px;
 }
 
-input[type="checkbox"]:checked + label::after {
-  content: "";
+input[type="checkbox"]:checked + label::before {
   width: 26px;
-  height: 22px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../img/spritesheet.png");
-  background-repeat: no-repeat;
   background-position: -185px -10px;
 }
 
 input[type="checkbox"]:disabled + label::before {
-  content: "";
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../img/spritesheet.png");
-  background-repeat: no-repeat;
   background-position: 0 -371px;
 }
 
-input[type="checkbox"]:disabled:checked + label::after {
-  content: "";
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../img/spritesheet.png");
-  background-repeat: no-repeat;
+input[type="checkbox"]:disabled:checked + label::before {
+  width: 26px;
   background-position: 0 -413px;
 }
 
@@ -1287,7 +1272,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   vertical-align: top;
   font-size: 14px;
   line-height: 21px;
-  width: 110px;
+  min-width: 110px;
   margin-right: 6px;
   margin-bottom: 14px;
   color: #333333;
