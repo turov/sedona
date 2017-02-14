@@ -362,6 +362,15 @@ main img {
   height: 748px;
 }
 
+.sedona-map {
+  position: relative;
+}
+
+.sedona-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /* футер */
 
 .main-index {
@@ -493,6 +502,7 @@ a:active::before {
 /* Всплывающая форма */
 
 .modal-content {
+  display: none;
   position: absolute;
   text-align: left;
   z-index: 3;
@@ -502,9 +512,7 @@ a:active::before {
   box-sizing: border-box;
   width: 568px;
   padding: 53px 56px;
-
   color: #000000;
-
   background: #ffffff;
 }
 
@@ -930,18 +938,35 @@ input[type="checkbox"]:disabled:checked + label::after {
 @keyframes show {
   from {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translate(0, 100%);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, 100%);
   }
 }
 
 .modal-content-show {
   display: block;
   animation-name: show;
+  animation-duration: 0.7s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate(-50%, 100%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-52%, 100%);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(-48%, 100%);
+  }
+}
+
+.modal-error {
+  animation-name: shake;
   animation-duration: 1s;
 }
 

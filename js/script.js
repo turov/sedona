@@ -1,10 +1,12 @@
 var link = document.querySelector(".hotels-search-btn");
 var form = document.querySelector(".modal-content");
-var arrival = document.querySelector("[id=arrival-date]");
-var departure = document.querySelector("[id=departure-date]");
-var adult = document.querySelector("[id=kids]");
-var kids = document.querySelector("[id=kids]");
-var search = document.querySelector(".book-form button");
+var arrival = document.querySelector("#arrival-date");
+var departure = document.querySelector("#departure-date");
+var adult = document.querySelector("#adult");
+var kids = document.querySelector("#kids");
+var search = document.querySelector(".book-find");
+
+form.classList.remove("modal-content-show");
 
 link.addEventListener("click", function(event) {
   event.preventDefault();
@@ -13,6 +15,8 @@ link.addEventListener("click", function(event) {
 });
 
 search.addEventListener("click", function(event) {
+  form.classList.remove("modal-error");
+  form.offsetWidth = form.offsetWidth;
   if (!(arrival.value && departure.value && adult.value && kids.value)) {
     event.preventDefault();
     form.classList.add("modal-error");
