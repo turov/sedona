@@ -581,6 +581,11 @@ a:active::before {
   min-height: 41px;
 }
 
+.book-field input:hover {
+  background: #ebebeb;
+  cursor: pointer;
+}
+
 .book-field input:focus {
   background: transparent;
 }
@@ -776,7 +781,6 @@ fieldset {
   font-weight: normal;
   line-height: 21px;
   font-size: 14px;
-  font-weight: normal;
 }
 
 .filters-checkox {
@@ -970,8 +974,11 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .btn-transparent {
   display: block;
-  padding: 6px 30px 5px 34px;
-  font-size: 14px;
+  padding-top: 6px;
+  padding-right: 34px;
+  padding-bottom: 5px;
+  padding-left: 34px;
+  font-size: 12px;
   line-height: 21px;
   color: #ffffff;
   text-transform: uppercase;
@@ -1158,7 +1165,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 10px 5.5px 0 5.5px;
+  border-width: 10px 5px 0 5px;
   border-color: #cccccc transparent transparent transparent;
 }
 
@@ -1166,7 +1173,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 5.5px 10px 5.5px;
+  border-width: 0 5px 10px 5px;
   border-color: transparent transparent #cccccc transparent;
 }
 
@@ -1194,13 +1201,11 @@ input[type="checkbox"]:disabled:checked + label::after {
   border-color: #81b3d2 transparent transparent transparent;
 }
 
-/*каталог меню, проблемы*/
-
 /*каталог */
 
 .catalog-item {
   padding: 30px 70px;
-  border-top: #e5e5e5 solid 1px; /* правильно */
+  border-top: #e5e5e5 solid 1px;
 }
 
 .catalog-item:last-child {
