@@ -122,6 +122,7 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -285,6 +286,7 @@ a {
   content: "";
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
@@ -476,6 +478,7 @@ a:active::before {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -519,6 +522,7 @@ a:active::before {
   background: url("../img/spritesheet.png") no-repeat -10px -10px;
   width: 113px;
   height: 39px;
+  -webkit-transition: background-position 0.5s;
   transition: background-position 0.5s;
 }
 
@@ -539,6 +543,7 @@ a:active::before {
   z-index: 3;
   bottom: 0;
   left: 50%;
+  -webkit-transform: translate(-50%, 100%);
   transform: translate(-50%, 100%);
   box-sizing: border-box;
   width: 568px;
@@ -656,6 +661,7 @@ a:active::before {
   position: absolute;
   top: 18px;
   left: 21px;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 12px;
   height: 3px;
@@ -669,6 +675,7 @@ a:active::before {
   position: absolute;
   top: 19px;
   left: 98px;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 12px;
   height: 11px;
@@ -875,6 +882,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   background: #ffffff;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -967,38 +975,76 @@ input[type="checkbox"]:disabled:checked + label::after {
   background: #ffffff;
 }
 
-@keyframes show {
+@-webkit-keyframes show {
   from {
     opacity: 0;
+    -webkit-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
 
   to {
     opacity: 1;
+    -webkit-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 100%);
     transform: translate(-50%, 100%);
   }
 }
 
 .modal-content-show {
   display: block;
+  -webkit-animation-name: show;
   animation-name: show;
+  -webkit-animation-duration: 0.7s;
   animation-duration: 0.7s;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate(-52%, 100%);
+    transform: translate(-52%, 100%);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate(-48%, 100%);
+    transform: translate(-48%, 100%);
+  }
 }
 
 @keyframes shake {
   0%, 100% {
+    -webkit-transform: translate(-50%, 100%);
     transform: translate(-50%, 100%);
   }
   10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate(-52%, 100%);
     transform: translate(-52%, 100%);
   }
   20%, 40%, 60%, 80% {
+    -webkit-transform: translate(-48%, 100%);
     transform: translate(-48%, 100%);
   }
 }
 
 .modal-error {
+  -webkit-animation-name: shake;
   animation-name: shake;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
