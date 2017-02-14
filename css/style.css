@@ -375,6 +375,15 @@ a {
   cursor: pointer;
 }
 
+.form-hotels a:hover {
+  background: #604e43;
+}
+
+.form-hotels a:active {
+  background: #503e33;
+  color: #766357;
+}
+
 .form-hotels p {
   width: 450px;
   margin: 0 auto;
@@ -699,7 +708,15 @@ a:active::before {
   cursor: pointer;
   border: none;
   text-transform: uppercase;
+}
 
+.book-find:hover {
+  background: #669ec0;
+}
+
+.book-find:active {
+  background: #5496bd;
+  color: #81b3d2;
 }
 
 .icon-minus:hover::before {
