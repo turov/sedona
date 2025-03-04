@@ -143,9 +143,13 @@ a {
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  background: #81B3D2 url("../img/main-background.jpg") 50% 22% no-repeat;
+  background-color: #81B3D2;
+  background-image:  url("../img/main-background.png");
+  background-repeat: no-repeat;
   min-height: 508px;
   padding-top: 76px;
+  background-size: cover;
+  background-position-y: 22%;
 }
 
 .intro-logo {
@@ -165,6 +169,7 @@ a {
   width: 1200px;
   height: 57px;
   background: url("../img/main-pic-bottom.png") no-repeat;
+  background-size: cover;
   bottom: 0;
 }
 
